@@ -1,0 +1,164 @@
+<!doctype html>
+
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <!-- <meta name="apple-mobile-web-app-capable" content="yes" /> -->
+    <title>Softwiz</title>
+
+    <meta name="Softwiz" content="10MonthTravel " />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link href="css/impress-demo.css" rel="stylesheet" type="text/css" />
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript">
+    function initialize() {
+    	var Ypoint= 36.342788;
+    	var Xpoint= 138.634987;
+    	var zoomLev = 17;
+    	var markerTitle = "선정된 곳";
+
+
+    	  var myLatlng = new google.maps.LatLng(Ypoint, Xpoint);
+    	  var mapOptions = {
+    	        zoom: zoomLev,
+    	        center: myLatlng,
+    	        mapTypeId: google.maps.MapTypeId.ROADMAP
+    	  }
+
+    	  var map = new google.maps.Map(document.getElementById('goo'), mapOptions);
+
+		var marker = new google.maps.Marker({
+			Position: myLatlng,
+			map:map,
+			title:markerTitle
+		});
+
+    	 google.maps.event.addListener(marker, 'click', function(){
+    		 infowindow.open(map, marker);
+    	 });
+    }
+    </script>
+</head>
+
+
+<body class="impress-not-supported" onload="initialize()">
+
+
+<div class="fallback-message">
+    <p><b>Chrome</b>, <b>Safari</b> or <b>Firefox</b>만 지원합니다.</p>
+</div>
+
+<!-- 여기서 부터 슬라이드 -->
+
+
+<div id="impress">
+
+
+<!-- 시작 페이지 -->
+    <div id="bored" class="step slide" data-x="-1000" data-y="-1500">
+        <q>Travel Plan 201510</q>
+    </div>
+
+<!-- 전체보여주기 -->
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+
+<!-- 2번째 슬라이드 -->
+    <div class="step slide" data-x="0" data-y="-1500">
+        <q>Content</q>
+        <p>1. 왜 여행을 가야 하나요?</p>
+        <p>2. 그래서 어디로 가나요?</p>
+        <p>3. 가서 뭐해요?</p>
+        <p>4. 어느정도...
+        <p>5. 이런 모습을 기대해 볼 수 있습니다.!!</p>
+    </div>
+
+
+<!-- 아래로 내려와서 살짝 줌인 -->
+    <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
+        <h1>왜</h1>
+        <span class="try">여행을 </span><br/>
+        <span class="try">가야 하나요<sup>?</sup></span>
+    </div>
+
+    <!-- 3번째 슬라이드 -->
+    <div class="step slide" data-x="1000" data-y="-1500">
+        <q>'훌륭한 일터'란 </q>
+        <p>상사와 경영진을 <strong>신뢰(Trust)</strong>하고, <br/>
+        자신이 하는 일에 <strong>자부심(Pride)</strong>을 느끼며,<br/>
+        다른 사람과 함께 일하는 것을<br/>
+        <strong>즐길(Fun) 수 있는</strong> 회사로 정의한다.</p>
+		<p align="right">로버트 레버링(Robert Levering)</p>
+    </div>
+
+    <!-- 4번째 슬라이드 -->
+    <div class="step slide" data-x="2000" data-y="-1500">
+        <q>목적 프로세스</q>
+        <img src="http://localhost:8080/Travel10/photo/jigsaw.jpg">
+    </div>
+
+
+<!-- 오른 90도 회전 -->
+    <div id="its" class="step" data-x="3000" data-y="7000" data-rotate="90" data-scale="5">
+        <h1>그래서<strong>어디로</strong>가나요? <br/></h1>
+    </div>
+
+<!-- 구글지도 -->
+     <div id="its_1" class="step " data-x="3000" data-y="2000" data-rotate="90" data-scale="5">
+        <div id="goo" style="width: 500px; height: 300px"></div>
+    </div>
+
+
+
+<!-- 왼90도 회전 -->
+    <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
+        <p>visualize your <b>big</b> <span class="thoughts">thoughts</span></p>
+    </div>
+
+<!-- 왼90도 회전된 상태에서 회전하며 줌인 그리고 글자 비틀기 -->
+    <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
+        <p>and <b>tiny</b> ideas</p>
+    </div>
+
+<!-- 줌인 상태에서 줌 아웃으로 나와서 옆으로 살짝 -->
+    <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
+        <p>by <b class="positioning">positioning</b>, <b class="rotating">rotating</b> and <b class="scaling">scaling</b> them on an infinite canvas</p>
+    </div>
+<!-- 360도 회전 -->
+    <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
+        <p>the only <b>limit</b> is your <b class="imagination">imagination</b></p>
+    </div>
+<!-- 살짝 비틀어서 줌인 -->
+    <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
+        <p>want to know more?</p>
+        <q><a href="http://github.com/bartaz/impress.js">use the source</a>, Luke!</q>
+    </div>
+<!-- 아래로 이동해서 글짜 비틀게  -->
+    <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
+        <p>one more thing...</p>
+    </div>
+
+<!-- 비튼 글자 바로 만들기 -->
+    <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
+        <p><span class="have">have</span> <span class="you">you</span> <span class="noticed">noticed</span> <span class="its">it's</span> <span class="in">in</span> <b>3D<sup>*</sup></b>?</p>
+        <span class="footnote">* beat that, prezi ;)</span>
+    </div>
+
+<!-- 전체보여주기 -->
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+
+</div>
+
+
+
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+
+
+</body>
+</html>
