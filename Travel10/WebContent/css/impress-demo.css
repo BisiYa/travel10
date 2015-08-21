@@ -45,6 +45,12 @@ table {
     border-spacing: 0;
 }
 
+img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 body {
     font-family: 'PT Sans', sans-serif;
     min-height: 740px;
@@ -257,7 +263,6 @@ a:focus {
 }
 
 #tiny {
-    width: 500px;
     text-align: center;
 }
 
